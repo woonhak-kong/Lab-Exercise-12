@@ -16,6 +16,7 @@ public:
 	virtual void Speak()
 	{
 		cout << "Hi, I'm a Animal, and my name is " << m_name << ".\n";
+		cout << "I have " << m_numOfLegs << " legs!!\n";
 	}
 
 	string getName()
@@ -85,19 +86,24 @@ private:
 
 int main()
 {
+	Animal animal;
 	Cat cat;
 	Dog dog;
 
+	animal.setName("SuperAnimal");
+	animal.setNumOfLegs(10);
+	animal.Speak();
+
+	cout << endl;
+
 	cat.setName("Kitty");
 	cat.setNumOfLegs(2);
-
 	cat.Speak();
 
 	cout << endl;
 
 	dog.setName("Snoopy");
 	dog.setNumOfLegs(2);
-
 	dog.Speak();
 
 	cout << endl;
